@@ -26,7 +26,7 @@ _lambda = 0.95
 epsilon = 0.3
 
 run_step = 20000 if train_mode else 0
-test_step = 100000000
+test_step = 10000
 
 print_interval = 10
 save_interval = 10
@@ -85,8 +85,6 @@ class PPOAgent:
         # 네트워크 연산에 따라 행동 결정
         pi, _ = self.network(torch.FloatTensor(state).to(device))
         action = torch.multinomial(pi, num_samples=1).cpu().numpy()
-        #print(pi)
-        #print(action)
         return action
 
     # 리플레이 메모리에 데이터 추가 (상태, 행동, 보상, 다음 상태, 게임 종료 여부)
@@ -193,6 +191,7 @@ if __name__ == '__main__':
     # 유니티 브레인 설정
     behavior_name = list(env.behavior_specs.keys())[0]
     spec = env.behavior_specs[behavior_name]
+    # 시뮬레이션 속도 설정
     if train_mode:
         engine_configuration_channel.set_configuration_parameters(time_scale=1.0)
     elif train_mode is False:
