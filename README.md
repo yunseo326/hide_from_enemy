@@ -8,6 +8,10 @@ pt 파일 사용시 model.py 를 참고하여 model의 사전 구성을 동일�
 4action_1_ckpt  :   상하좌우 4개 액션 state ver1  장애물 ver3
 4action_2_ckpt  :   상하좌우 4개 액션 state ver1  장애물 ver3
 4action_3_ckpt  :   상하좌우 4개 액션 state ver2  장애물 ver3
+
+학습중...
+4action_4_ckpt  :   상하좌우 4개 액션 state ver2  장애물 ver4
+4action_5_ckpt  :   좌우회전 + 앞뒤 이동 4개 액션 state ver2  장애물 ver4
 ```
 ```
 학습 환경 
@@ -29,4 +33,5 @@ state 버전
 1. 장애물 1개 좌우로만 배치
 2. 장애물 3개 좌우로만 배치
 3. 장애물 3개 상하좌우로 배치
+4. 장애물 3개 상하좌우로 배치 + 장애물과 가까워야 성공하는 조건 추가
 ```
