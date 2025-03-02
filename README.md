@@ -7,12 +7,13 @@ state 중 90개는 라이더 센서입니다.
 state 96 6개 추가(적과의 상대거리 + 처음시작지점과의 상대거리)
 state 93 3개 추가(적과의 상대거리)
 
+'''cpp
 2action_pt      :   좌우2개 액션      state 96  장애물 ver1
 4action_0_ckpt  :   상하좌우 4개 액션 state 96  장애물 ver2
 4action_1_ckpt  :   상하좌우 4개 액션 state 96  장애물 ver3
 4action_2_ckpt  :   상하좌우 4개 액션 state 96  장애물 ver3
 4action_3_ckpt  :   상하좌우 4개 액션 state 93  장애물 ver3
-
+'''
 
 학습 환경 
 ppo 
